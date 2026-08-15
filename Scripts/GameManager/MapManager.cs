@@ -101,7 +101,6 @@ public partial class MapManager : Node3D
 
 		Vector2I coords = (Vector2I)PlayerInput.Player2D_GlobalPosition;
 
-
 		float nX = Mathf.InverseLerp(minX, maxX, coords.X);
 		float nZ = Mathf.InverseLerp(minZ, maxZ, coords.Y);
 

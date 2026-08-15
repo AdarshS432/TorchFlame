@@ -1,0 +1,344 @@
+[gd_scene format=3 uid="uid://b31ux47pdxs7d"]
+
+[ext_resource type="Texture2D" uid="uid://knoqsn63wc3k" path="res://UI/Screenshots/Dungeon-Scenic-1.png" id="1_uduvg"]
+[ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_urfio"]
+[ext_resource type="Script" uid="uid://cdlejdlcgmgb6" path="res://Scripts/UI_Text-Updates/Settings.cs" id="3_04khp"]
+[ext_resource type="Script" uid="uid://db2s2a7j8g7sf" path="res://Scripts/UI/StartGame.cs" id="3_uh4rp"]
+[ext_resource type="Texture2D" uid="uid://dbvbjkjodh8wc" path="res://Models/Map/Paper_Border_diffuse.png" id="3_urfio"]
+[ext_resource type="Script" uid="uid://ij7nb7kup3ib" path="res://Scripts/UI/Credits_Back.cs" id="5_ibsel"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrdln"]
+texture = ExtResource("3_urfio")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uh4rp"]
+texture = ExtResource("3_urfio")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_528h5"]
+texture = ExtResource("3_urfio")
+modulate_color = Color(0.67058825, 0.67058825, 0.67058825, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_72fbm"]
+texture = ExtResource("3_urfio")
+modulate_color = Color(0.7877592, 0.78775924, 0.787759, 1)
+
+[node name="GameConfig" type="Control" unique_id=854299054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=813860527]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uduvg")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="." unique_id=96416191]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.5
+offset_right = 267.5
+offset_bottom = 125.0
+grow_horizontal = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(1, 0.6313726, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(0.34509805, 0.15686275, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 96
+text = " TorchFlame"
+
+[node name="VersionLabel" type="Label" parent="." unique_id=157343536]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_urfio")
+theme_override_font_sizes/font_size = 24
+text = "Version: 1.0.0"
+
+[node name="Play_Margins" type="MarginContainer" parent="." unique_id=71542292]
+propagate_maximum_size = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -324.0
+offset_top = -96.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 64
+
+[node name="Buttons" type="VBoxContainer" parent="Play_Margins" unique_id=88321249]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="StartGame" type="Button" parent="Play_Margins/Buttons" unique_id=608238155]
+custom_minimum_size = Vector2(96, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_urfio")
+theme_override_font_sizes/font_size = 32
+text = "Play"
+script = ExtResource("3_uh4rp")
+
+[node name="Settings_Container" type="ScrollContainer" parent="." unique_id=1980532422]
+custom_minimum_size = Vector2(400, 432)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -180.0
+offset_right = 192.0
+offset_bottom = 252.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+scroll_vertical = 71
+
+[node name="Settings" type="VBoxContainer" parent="Settings_Container" unique_id=382978257]
+layout_mode = 2
+theme_override_constants/separation = 8
+script = ExtResource("3_04khp")
+
+[node name="MapLabel" type="Label" parent="Settings_Container/Settings" unique_id=1030556510]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+text = "Map Settings: "
+
+[node name="Level_Settings" type="VBoxContainer" parent="Settings_Container/Settings" unique_id=2022559583]
+custom_minimum_size = Vector2(324, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="LevelsContainer" type="PanelContainer" parent="Settings_Container/Settings/Level_Settings" unique_id=807937429]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mrdln")
+
+[node name="Levels_HBox" type="HBoxContainer" parent="Settings_Container/Settings/Level_Settings/LevelsContainer" unique_id=142064634]
+layout_mode = 2
+alignment = 2
+
+[node name="Levels_Label" type="Label" parent="Settings_Container/Settings/Level_Settings/LevelsContainer/Levels_HBox" unique_id=216081256]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+text = "      Levels:    "
+
+[node name="Levels" type="SpinBox" parent="Settings_Container/Settings/Level_Settings/LevelsContainer/Levels_HBox" unique_id=267495829]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 48)
+custom_maximum_size = Vector2(64, -1)
+layout_mode = 2
+theme = ExtResource("2_urfio")
+min_value = 2.0
+max_value = 12.0
+value = 2.0
+
+[node name="DungeonSizeContainer" type="PanelContainer" parent="Settings_Container/Settings/Level_Settings" unique_id=1945176830]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mrdln")
+
+[node name="DungeonSize_HBox" type="HBoxContainer" parent="Settings_Container/Settings/Level_Settings/DungeonSizeContainer" unique_id=198466381]
+layout_mode = 2
+alignment = 2
+
+[node name="Size_Label" type="Label" parent="Settings_Container/Settings/Level_Settings/DungeonSizeContainer/DungeonSize_HBox" unique_id=523942192]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+text = "      Map Size:    "
+
+[node name="Size" type="SpinBox" parent="Settings_Container/Settings/Level_Settings/DungeonSizeContainer/DungeonSize_HBox" unique_id=1154618212]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 48)
+custom_maximum_size = Vector2(64, -1)
+layout_mode = 2
+theme = ExtResource("2_urfio")
+min_value = 8.0
+max_value = 96.0
+value = 10.0
+
+[node name="Room_Locations" type="PanelContainer" parent="Settings_Container/Settings/Level_Settings" unique_id=1998741726]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="RoomPlacementButton" type="Button" parent="Settings_Container/Settings/Level_Settings/Room_Locations" unique_id=703544281]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
+toggle_mode = true
+text = "Room Placement: Default"
+
+[node name="FireLabel" type="Label" parent="Settings_Container/Settings" unique_id=1810066352]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+text = "Fire Settings:"
+
+[node name="FireDelayMargins" type="MarginContainer" parent="Settings_Container/Settings" unique_id=1501097618]
+layout_mode = 2
+theme_override_constants/margin_top = 0
+
+[node name="FireDelayContainer" type="PanelContainer" parent="Settings_Container/Settings/FireDelayMargins" unique_id=1914915506]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_mrdln")
+
+[node name="FireDelayHBox" type="HBoxContainer" parent="Settings_Container/Settings/FireDelayMargins/FireDelayContainer" unique_id=1684696492]
+layout_mode = 2
+alignment = 2
+
+[node name="FireDelay_Label" type="Label" parent="Settings_Container/Settings/FireDelayMargins/FireDelayContainer/FireDelayHBox" unique_id=1624414806]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+text = "    Fire Delay:    "
+
+[node name="FireDelay" type="SpinBox" parent="Settings_Container/Settings/FireDelayMargins/FireDelayContainer/FireDelayHBox" unique_id=504486141]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 48)
+custom_maximum_size = Vector2(80, -1)
+layout_mode = 2
+theme = ExtResource("2_urfio")
+min_value = 1.5
+step = 0.5
+value = 10.0
+
+[node name="ToolLabel" type="Label" parent="Settings_Container/Settings" unique_id=393582004]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+text = "Tool Settings:"
+
+[node name="Tool_Settings" type="VBoxContainer" parent="Settings_Container/Settings" unique_id=2061746117]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Map" type="PanelContainer" parent="Settings_Container/Settings/Tool_Settings" unique_id=146373244]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="MapButton" type="Button" parent="Settings_Container/Settings/Tool_Settings/Map" unique_id=930419670]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
+toggle_mode = true
+text = "Map Enabled"
+
+[node name="Compass" type="PanelContainer" parent="Settings_Container/Settings/Tool_Settings" unique_id=2020013799]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="CompassButton" type="Button" parent="Settings_Container/Settings/Tool_Settings/Compass" unique_id=920055263]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
+toggle_mode = true
+text = "Compass Enabled"
+
+[node name="Coordinates" type="PanelContainer" parent="Settings_Container/Settings/Tool_Settings" unique_id=2119415447]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="CoordinatesButton" type="Button" parent="Settings_Container/Settings/Tool_Settings/Coordinates" unique_id=1928878950]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
+toggle_mode = true
+text = "Coordinates Enabled"
+
+[node name="ResetLabel" type="Label" parent="Settings_Container/Settings" unique_id=420376559]
+layout_mode = 2
+theme = ExtResource("2_urfio")
+text = "Reset: "
+
+[node name="ResetContainer" type="VBoxContainer" parent="Settings_Container/Settings" unique_id=1168444195]
+layout_mode = 2
+
+[node name="Reset" type="PanelContainer" parent="Settings_Container/Settings/ResetContainer" unique_id=144431820]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="Settings_Container/Settings/ResetContainer/Reset" unique_id=531943420]
+unique_name_in_owner = true
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
+text = "Reset Settings"
+
+[node name="Back_Margins" type="MarginContainer" parent="." unique_id=667180982]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="Back" type="Button" parent="Back_Margins" unique_id=1800892508]
+custom_minimum_size = Vector2(128, 48)
+layout_mode = 2
+theme = ExtResource("2_urfio")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+script = ExtResource("5_ibsel")

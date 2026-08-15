@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://di8xilxrl2ev7"]
+
+[ext_resource type="Script" uid="uid://btmntn4rti4yf" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_7ovfa"]
+[ext_resource type="PackedScene" uid="uid://cdgfkcdhmfxea" path="res://Rooms/Dungeon/Stairs.blend" id="2_plw70"]
+[ext_resource type="Script" uid="uid://p2fv5yxefyuc" path="res://Scripts/GameManager/RoomManager.cs" id="3_j41fl"]
+[ext_resource type="PackedScene" uid="uid://dirytcsne2hjr" path="res://Rooms/General/Mask.blend" id="4_db7p5"]
+
+[node name="Stairs" type="Node3D" unique_id=779599073]
+script = ExtResource("1_7ovfa")
+size_in_voxels = Vector3i(1, 2, 2)
+voxel_scale = Vector3(12, 6, 12)
+max_count = 64
+is_stair_room = true
+metadata/_custom_type_script = "uid://btmntn4rti4yf"
+
+[node name="Stairs" parent="." unique_id=524288874 instance=ExtResource("2_plw70")]
+transform = Transform3D(1, 0, 0, 0, 1.333, 0, 0, 0, 1, 0, -4.35, 1.65)
+
+[node name="RoomManager" type="Node3D" parent="Stairs" unique_id=1869183418]
+script = ExtResource("3_j41fl")
+Door_Mask = ExtResource("4_db7p5")
+
+[node name="DOOR-a" type="Node3D" parent="." unique_id=393659568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -12)
+
+[node name="DOOR-b" type="Node3D" parent="." unique_id=217837526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 12)

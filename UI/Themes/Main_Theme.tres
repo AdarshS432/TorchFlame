@@ -1,0 +1,68 @@
+[gd_resource type="Theme" format=3 uid="uid://dllcuglq0qgrc"]
+
+[ext_resource type="FontFile" uid="uid://imflvcxjimw1" path="res://UI/Fonts/Caudex-Regular.ttf" id="1_usse2"]
+[ext_resource type="Texture2D" uid="uid://ql1fxfescsg5" path="res://UI/Elements/Button_Background.svg" id="2_obn2v"]
+[ext_resource type="Texture2D" uid="uid://dbvbjkjodh8wc" path="res://Models/Map/Paper_Border_diffuse.png" id="3_ciywa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obn2v"]
+texture = ExtResource("2_obn2v")
+modulate_color = Color(0.62152386, 0.62152386, 0.6215238, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrphp"]
+texture = ExtResource("2_obn2v")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ntkl"]
+texture = ExtResource("2_obn2v")
+modulate_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7s8lf"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukeut"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uc1yw"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s7sim"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ciywa"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkrja"]
+texture = ExtResource("3_ciywa")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyla6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ln1gj"]
+
+[resource]
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_usse2")
+Button/styles/hover = SubResource("StyleBoxTexture_obn2v")
+Button/styles/normal = SubResource("StyleBoxTexture_yrphp")
+Button/styles/pressed = SubResource("StyleBoxTexture_3ntkl")
+FoldableContainer/font_sizes/font_size = 32
+FoldableContainer/fonts/font = ExtResource("1_usse2")
+FoldableContainer/styles/focus = SubResource("StyleBoxTexture_7s8lf")
+FoldableContainer/styles/panel = SubResource("StyleBoxTexture_ukeut")
+FoldableContainer/styles/title_collapsed_hover_panel = SubResource("StyleBoxTexture_uc1yw")
+FoldableContainer/styles/title_collapsed_panel = SubResource("StyleBoxTexture_s7sim")
+FoldableContainer/styles/title_hover_panel = SubResource("StyleBoxTexture_ciywa")
+FoldableContainer/styles/title_panel = SubResource("StyleBoxTexture_lkrja")
+Label/font_sizes/font_size = 32
+Label/fonts/font = ExtResource("1_usse2")
+LineEdit/colors/font_color = Color(0.2307542, 0.11460041, 1.2032688e-08, 1)
+LineEdit/font_sizes/font_size = 32
+LineEdit/fonts/font = ExtResource("1_usse2")
+LineEdit/styles/focus = SubResource("StyleBoxTexture_oyla6")
+LineEdit/styles/normal = SubResource("StyleBoxTexture_ln1gj")
+SpinBox/colors/down_disabled_icon_modulate = Color(0.12437538, 0.052661166, 0, 1)
+SpinBox/colors/down_hover_icon_modulate = Color(0.23137255, 0.11372549, 0, 1)
+SpinBox/colors/down_icon_modulate = Color(0.31764707, 0.16470589, 0, 1)
+SpinBox/colors/down_pressed_icon_modulate = Color(0.14117648, 0.0627451, 0, 1)
+SpinBox/colors/up_disabled_icon_modulate = Color(0.1254902, 0.050980393, 0, 1)
+SpinBox/colors/up_hover_icon_modulate = Color(0.23137255, 0.11372549, 0, 1)
+SpinBox/colors/up_icon_modulate = Color(0.31798616, 0.16475663, 2.4065375e-08, 1)
+SpinBox/colors/up_pressed_icon_modulate = Color(0.14167333, 0.062114805, 2.4065375e-08, 1)

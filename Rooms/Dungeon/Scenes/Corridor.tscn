@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://drcnh8v0wyfn3"]
+
+[ext_resource type="Script" uid="uid://btmntn4rti4yf" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_ybq6l"]
+[ext_resource type="PackedScene" uid="uid://blitor8diglfr" path="res://Rooms/Dungeon/Corridor.blend" id="2_k6pue"]
+[ext_resource type="Script" uid="uid://p2fv5yxefyuc" path="res://Scripts/GameManager/RoomManager.cs" id="4_jodxn"]
+[ext_resource type="PackedScene" uid="uid://dirytcsne2hjr" path="res://Rooms/General/Mask.blend" id="5_2jxvd"]
+[ext_resource type="PackedScene" uid="uid://d0il1k7ri2vuy" path="res://Rooms/Dungeon/Scenes/Objects/Fire.tscn" id="5_2y7pd"]
+
+[node name="Corridor" type="Node3D" unique_id=414013735]
+script = ExtResource("1_ybq6l")
+voxel_scale = Vector3(12, 6, 12)
+metadata/_custom_type_script = "uid://btmntn4rti4yf"
+
+[node name="RoomManager" type="Node3D" parent="." unique_id=614673032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+script = ExtResource("4_jodxn")
+Door_Mask = ExtResource("5_2jxvd")
+
+[node name="Corridor" parent="." unique_id=1148519045 instance=ExtResource("2_k6pue")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+
+[node name="DOOR?-a" type="Node3D" parent="." unique_id=1854098910]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 6)
+
+[node name="DOOR?-b" type="Node3D" parent="." unique_id=1791614595]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -6)
+
+[node name="DOOR?-c" type="Node3D" parent="." unique_id=956473288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0)
+
+[node name="DOOR?-d" type="Node3D" parent="." unique_id=1954772970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="Room_Fire" parent="." unique_id=389737088 instance=ExtResource("5_2y7pd")]

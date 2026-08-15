@@ -1,0 +1,304 @@
+[gd_scene format=3 uid="uid://crbta7pgpc56"]
+
+[ext_resource type="Script" uid="uid://dgqojex84gbmi" path="res://Scripts/UI/GameUi.cs" id="1_v6vxq"]
+[ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_krjqg"]
+[ext_resource type="Texture2D" uid="uid://dbvbjkjodh8wc" path="res://Models/Map/Paper_Border_diffuse.png" id="3_w7j1c"]
+[ext_resource type="Script" uid="uid://bcya6fbemyqyq" path="res://Scripts/UI/Buttons.cs" id="4_8duso"]
+[ext_resource type="Texture2D" uid="uid://ql1fxfescsg5" path="res://UI/Elements/Button_Background.svg" id="5_ax0t1"]
+[ext_resource type="Script" uid="uid://d0t5bv6qo8tyg" path="res://Scripts/UI_Text-Updates/GameWon.cs" id="7_8duso"]
+[ext_resource type="Script" uid="uid://bspmk1ubt5wla" path="res://Scripts/UI/MobileControls.cs" id="7_krjqg"]
+[ext_resource type="Script" uid="uid://bipsm72ehk8g8" path="res://Scripts/UI_Text-Updates/GameOver.cs" id="7_pbchr"]
+[ext_resource type="Texture2D" uid="uid://fglhoc5b5b8i" path="res://UI/Elements/Sprint_Button.svg" id="8_8duso"]
+[ext_resource type="Texture2D" uid="uid://2xo02q0u7fr0" path="res://UI/Elements/Cycle_Inventory_Button.svg" id="8_w7j1c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ukeut"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.5058824, 0.16078432, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ch0un"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.21373957, 0.048390456, 1.8049032e-08, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cl2uv"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.3772309, 0.111289196, 7.219613e-08, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yrphp"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.5058824, 0.16078432, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ntkl"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.21373957, 0.048390456, 1.8049032e-08, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l4nxx"]
+texture = ExtResource("5_ax0t1")
+modulate_color = Color(0.3772309, 0.111289196, 7.219613e-08, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l4nxx"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_krjqg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ital"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8duso"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ax0t1"]
+
+[node name="GameUI" type="CanvasLayer" unique_id=149433497]
+process_mode = 3
+script = ExtResource("1_v6vxq")
+
+[node name="Menu_Margins" type="MarginContainer" parent="." unique_id=1722839731]
+offset_right = 256.0
+offset_bottom = 42.0
+
+[node name="Menu_Dropdown" type="FoldableContainer" parent="Menu_Margins" unique_id=332803911]
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(0.3019608, 0.15686275, 0, 1)
+theme_override_colors/hover_font_color = Color(0.3019608, 0.15686275, 0, 1)
+theme_override_colors/collapsed_font_color = Color(0.3019608, 0.15686275, 0, 1)
+theme_override_colors/font_outline_color = Color(0.3019608, 0.15686275, 0, 1)
+folded = true
+title = "Menu"
+
+[node name="Menu" type="TextureRect" parent="Menu_Margins/Menu_Dropdown" unique_id=711690318]
+visible = false
+custom_minimum_size = Vector2(256, 256)
+custom_maximum_size = Vector2(256, 256)
+layout_mode = 2
+texture = ExtResource("3_w7j1c")
+expand_mode = 1
+
+[node name="Menu_Label" type="Label" parent="Menu_Margins/Menu_Dropdown/Menu" unique_id=711655963]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -41.5
+offset_right = 41.5
+offset_bottom = 42.0
+grow_horizontal = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(0.3023813, 0.15606976, 2.6471912e-07, 1)
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Buttons" type="VBoxContainer" parent="Menu_Margins/Menu_Dropdown/Menu" unique_id=73044309]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -34.0
+offset_right = 64.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_8duso")
+
+[node name="Pause" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Buttons" unique_id=618993202]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ukeut")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ch0un")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cl2uv")
+toggle_mode = true
+text = "Pause"
+
+[node name="Quit" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Buttons" unique_id=2007037114]
+custom_minimum_size = Vector2(128, 32)
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yrphp")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3ntkl")
+theme_override_styles/hover = SubResource("StyleBoxTexture_l4nxx")
+toggle_mode = true
+text = "Quit
+"
+
+[node name="EndScreen" type="Panel" parent="." unique_id=2076262644]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4nxx")
+script = ExtResource("7_pbchr")
+
+[node name="Stats_VBox" type="VBoxContainer" parent="EndScreen" unique_id=899345988]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -41.5
+offset_right = 164.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_Over" type="Label" parent="EndScreen/Stats_VBox" unique_id=249639752]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "You Died"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Survived" type="Label" parent="EndScreen/Stats_VBox" unique_id=1306481936]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Survived For: 00.000 Minutes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Distance" type="Label" parent="EndScreen/Stats_VBox" unique_id=1648834397]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "00.000 Meters from End"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WinScreen" type="Panel" parent="." unique_id=606606118]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_l4nxx")
+script = ExtResource("7_8duso")
+
+[node name="Stats_VBox" type="VBoxContainer" parent="WinScreen" unique_id=1464703380]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -164.0
+offset_top = -41.5
+offset_right = 164.0
+offset_bottom = 41.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Game_Over" type="Label" parent="WinScreen/Stats_VBox" unique_id=1198330545]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 64
+text = "You Survived"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Survived" type="Label" parent="WinScreen/Stats_VBox" unique_id=1413847563]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 32
+text = "Survived For: 00.000 Minutes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Mobile_Controls" type="Control" parent="." unique_id=1170491601]
+custom_minimum_size = Vector2(1152, 0)
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 112.0
+grow_vertical = 0
+script = ExtResource("7_krjqg")
+
+[node name="Rotation_Joystick" type="VirtualJoystick" parent="Mobile_Controls" unique_id=1491577596]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = -100.0
+grow_horizontal = 0
+grow_vertical = 0
+action_left = &"Camera_Left"
+action_right = &"Camera_Right"
+action_up = &"Camera_Up"
+action_down = &"Camera_Down"
+
+[node name="Controls_VBox" type="VBoxContainer" parent="Mobile_Controls" unique_id=2007270747]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -168.0
+offset_right = 132.0
+grow_vertical = 0
+
+[node name="Extra_Options" type="HBoxContainer" parent="Mobile_Controls/Controls_VBox" unique_id=33412166]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Sprint" type="Button" parent="Mobile_Controls/Controls_VBox/Extra_Options" unique_id=1073190567]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
+theme_override_colors/icon_hover_color = Color(0.601223, 0.601223, 0.60122293, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_krjqg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7ital")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8duso")
+toggle_mode = true
+icon = ExtResource("8_8duso")
+expand_icon = true
+
+[node name="Cycle" type="Button" parent="Mobile_Controls/Controls_VBox/Extra_Options" unique_id=2138800366]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+custom_maximum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(0.44705883, 0.44705883, 0.44705883, 1)
+theme_override_colors/icon_hover_color = Color(0.6, 0.6, 0.6, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_krjqg")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ax0t1")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_8duso")
+icon = ExtResource("8_w7j1c")
+expand_icon = true
+
+[node name="Movement_Joystick" type="VirtualJoystick" parent="Mobile_Controls/Controls_VBox" unique_id=1217475354]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+action_left = &"Left"
+action_right = &"Right"
+action_up = &"Forward"
+action_down = &"Backward"

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dwqp1uygrc4yq"]
+
+[ext_resource type="Script" uid="uid://byk4e4tivmfa1" path="res://Scripts/Audio/TitleAudio.cs" id="1_uwi8f"]
+[ext_resource type="AudioStream" uid="uid://dl2ikwcl271h3" path="res://Audio/BGMs/TorchflameTitleScreen.mp3" id="1_yw47b"]
+
+[node name="TitleAudio" type="Node" unique_id=2070947752]
+
+[node name="TitleAudio" type="AudioStreamPlayer" parent="." unique_id=1974106684]
+stream = ExtResource("1_yw47b")
+script = ExtResource("1_uwi8f")

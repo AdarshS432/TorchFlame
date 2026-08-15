@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="128"
+   height="128"
+   viewBox="0 0 33.866667 33.866666"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   sodipodi:docname="Sprint_Button.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="4.0668163"
+     inkscape:cx="74.136616"
+     inkscape:cy="71.185905"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:25.4px;writing-mode:lr-tb;direction:ltr;fill:#ffffff;fill-opacity:0.85;stroke:#000000;stroke-width:0"
+       x="22.081783"
+       y="59.252789"
+       id="text1"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         style="fill:#dc1c65;fill-opacity:0.85;stroke-width:0"
+         x="22.081783"
+         y="59.252789" /></text>
+    <circle
+       style="fill:#000000;fill-opacity:0.85;stroke:#000000;stroke-width:0"
+       id="path1"
+       cx="16.933332"
+       cy="16.933332"
+       r="16.933332" />
+    <path
+       d="M 17.09661,15.805671 7.0437375,20.274582 V 18.706543 L 14.971046,15.265569 7.0437375,11.824594 V 10.256555 L 17.09661,14.725466 Z m 14.600185,0 -10.052872,4.468911 v -1.568039 l 7.927308,-3.440974 -7.927308,-3.440975 v -1.568039 l 10.052872,4.468911 z"
+       id="text2"
+       style="font-size:17.8408px;fill:#ffffff;fill-opacity:0.85;stroke:#000000;stroke-width:0"
+       transform="scale(0.90151003,1.10925)"
+       aria-label="&gt;&gt;" />
+  </g>
+</svg>

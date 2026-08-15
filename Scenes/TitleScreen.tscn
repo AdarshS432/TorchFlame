@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://cosvue7y1iv6v"]
+
+[ext_resource type="Texture2D" uid="uid://knoqsn63wc3k" path="res://UI/Screenshots/Dungeon-Scenic-1.png" id="1_uebgo"]
+[ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_vmg2h"]
+[ext_resource type="Script" uid="uid://cq4hufq87w6p6" path="res://Scripts/UI/Play.cs" id="3_8l4an"]
+[ext_resource type="Script" uid="uid://dv7q1umqu8tbl" path="res://Scripts/UI/Credits.cs" id="4_n15yj"]
+
+[node name="TitleScreen" type="Control" unique_id=1392780238]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Background" type="TextureRect" parent="." unique_id=219946892]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uebgo")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="." unique_id=793512173]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme = ExtResource("2_vmg2h")
+theme_override_colors/font_color = Color(1, 0.6313726, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(0.34509805, 0.15686275, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 96
+text = " TorchFlame"
+
+[node name="ButtonsContainer" type="MarginContainer" parent="." unique_id=1991229205]
+custom_minimum_size = Vector2(324, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -45.5
+offset_right = 184.0
+offset_bottom = 45.5
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+
+[node name="Buttons" type="VBoxContainer" parent="ButtonsContainer" unique_id=23970629]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Play" type="Button" parent="ButtonsContainer/Buttons" unique_id=1484470719]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme = ExtResource("2_vmg2h")
+theme_override_font_sizes/font_size = 64
+text = "Play"
+script = ExtResource("3_8l4an")
+
+[node name="Credits" type="Button" parent="ButtonsContainer/Buttons" unique_id=1831227661]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme = ExtResource("2_vmg2h")
+theme_override_font_sizes/font_size = 64
+text = "Credits
+"
+script = ExtResource("4_n15yj")
+
+[node name="VersionLabel" type="Label" parent="." unique_id=294143659]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -192.0
+offset_top = -42.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = ExtResource("2_vmg2h")
+theme_override_font_sizes/font_size = 24
+text = "Version: 1.0.0"

@@ -1,0 +1,20 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://id1n0dfms4ma"]
+
+[sub_resource type="Curve" id="Curve_nmyh1"]
+_limits = [-360.0, 360.0, 0.0, 1.0]
+_data = [Vector2(0, 4.044983), 0.0, 615.756, 0, 0, Vector2(0.47972977, 246.74164), 0.0, 0.0, 0, 0, Vector2(0.9797299, -84.94379), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_r8x2n"]
+curve = SubResource("Curve_nmyh1")
+
+[resource]
+emission_shape_offset = Vector3(0, 0.75, 0)
+emission_shape = 3
+emission_box_extents = Vector3(5, 2, 5)
+angle_curve = SubResource("CurveTexture_r8x2n")
+direction = Vector3(0, 1, 0)
+spread = 22.5
+flatness = 1.0
+initial_velocity_min = 4.0
+initial_velocity_max = 16.0

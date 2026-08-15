@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://y5287wia66u2"]
+
+[ext_resource type="Texture2D" uid="uid://knoqsn63wc3k" path="res://UI/Screenshots/Dungeon-Scenic-1.png" id="1_xbebw"]
+[ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_7xmno"]
+[ext_resource type="Script" uid="uid://cxfmxckxcuacc" path="res://Scripts/UI_Text-Updates/CopyLicenseText.cs" id="3_7xmno"]
+[ext_resource type="Script" uid="uid://ij7nb7kup3ib" path="res://Scripts/UI/Credits_Back.cs" id="3_uy3b0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbebw"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101960786, 0.101960786, 0.101960786, 0)
+border_width_top = 4
+border_width_bottom = 4
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 20
+
+[node name="Credits" type="Control" unique_id=1414851708]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=780642463]
+self_modulate = Color(0.5409905, 0.5409905, 0.5409905, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_xbebw")
+expand_mode = 1
+
+[node name="Back_Margins" type="MarginContainer" parent="." unique_id=88721802]
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+
+[node name="Back" type="Button" parent="Back_Margins" unique_id=1855515728]
+custom_minimum_size = Vector2(128, 48)
+layout_mode = 2
+theme = ExtResource("2_7xmno")
+theme_override_font_sizes/font_size = 32
+text = "Back"
+script = ExtResource("3_uy3b0")
+
+[node name="Container" type="VBoxContainer" parent="." unique_id=382678419]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -130.0
+offset_right = 130.0
+offset_bottom = 40.0
+grow_horizontal = 2
+
+[node name="Title" type="Label" parent="Container" unique_id=1970319007]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_7xmno")
+theme_override_colors/font_color = Color(1, 0.6313726, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(0.34509805, 0.15686275, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 96
+text = " TorchFlame"
+
+[node name="Author" type="Label" parent="Container" unique_id=584680446]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_7xmno")
+text = "© 2026 Adarsh Sai. All Rights Reserved."
+
+[node name="License_Header" type="PanelContainer" parent="Container" unique_id=1206816084]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xbebw")
+
+[node name="Licenses_Label" type="Label" parent="Container/License_Header" unique_id=186051851]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_7xmno")
+theme_override_font_sizes/font_size = 48
+text = "Third Party Licenses"
+
+[node name="Licenses" type="ScrollContainer" parent="Container" unique_id=1821377245]
+custom_minimum_size = Vector2(768, 384)
+layout_mode = 2
+
+[node name="Display" type="RichTextLabel" parent="Container/Licenses" unique_id=260382306]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_7xmno")
+bbcode_enabled = true
+script = ExtResource("3_7xmno")
+License_Files = Array[String](["res://Licenses/Attribution.txt", "res://Licenses/Godot-License.txt", "res://Licenses/Godot-Copyright.txt"])

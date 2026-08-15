@@ -1,0 +1,86 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://brvhkomkwnbt0"
+path="res://.godot/imported/Compass.blend-66c600952c918b7d4c7906977949a6c9.scn"
+
+[deps]
+
+source_file="res://Tools/Compass/Compass.blend"
+dest_files=["res://.godot/imported/Compass.blend-66c600952c918b7d4c7906977949a6c9.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"Axle": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Tools/Compass/Materials/Axle.tres",
+"use_external/path": "uid://dae27xqx8cx8g"
+},
+"Compass_Frame": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Tools/Compass/Materials/Compass_Frame.tres",
+"use_external/path": "uid://dsngfpyut8qfe"
+},
+"Compass_Texture": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Tools/Compass/Materials/Compass_Texture.tres",
+"use_external/path": "uid://bynsitg40jb6e"
+},
+"Pin": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Tools/Compass/Materials/Pin.tres",
+"use_external/path": "uid://d0pxbjm4hj21e"
+}
+}
+}
+blender/nodes/visible=0
+blender/nodes/active_collection_only=false
+blender/nodes/punctual_lights=true
+blender/nodes/cameras=true
+blender/nodes/custom_properties=true
+blender/nodes/modifiers=1
+blender/meshes/vertex_colors=1
+blender/meshes/uvs=true
+blender/meshes/normals=true
+blender/meshes/export_geometry_nodes_instances=false
+blender/meshes/gpu_instances=false
+blender/meshes/tangents=true
+blender/meshes/skins=2
+blender/meshes/export_bones_deforming_mesh_only=false
+blender/materials/unpack_enabled=true
+blender/materials/export_materials=1
+blender/animation/limit_playback=true
+blender/animation/always_sample=true
+blender/animation/group_tracks=true
+gltf/naming_version=2
+gltf/texture_map_mode=1

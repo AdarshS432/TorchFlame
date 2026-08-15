@@ -1,0 +1,175 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bbokoc16otrsv"]
+
+[ext_resource type="Texture2D" uid="uid://cw3s12hn3yinr" path="res://Rooms/Dungeon/open_room_materials/Floor_diffuse.png" id="1_b6eka"]
+[ext_resource type="Texture2D" uid="uid://dphcomligpakn" path="res://Rooms/Dungeon/open_room_materials/Floor_normal.png" id="2_vtskh"]
+
+[resource]
+resource_name = "brick_pavement_02_mod"
+cull_mode = 2
+albedo_texture = ExtResource("1_b6eka")
+metallic_texture_channel = 2
+roughness_texture_channel = 1
+normal_enabled = true
+normal_texture = ExtResource("2_vtskh")
+metadata/extras = {
+"asset_data": {
+"access": "free",
+"accessLabel": "Free",
+"addonVersion": "1.0",
+"assetBaseId": "aa400c76-3b18-4df8-992a-eb99a487125b",
+"assetType": "material",
+"author": {
+"aboutMe": "We publish 100% free high quality 3D assets with no strings attached :) If you want to support our work and help us keep making new assets, find us on Patreon: https://polyhaven.com/support-us",
+"aboutMeUrl": "https://polyhaven.com/",
+"avatar128": "/avatar-redirect/32aebffe-2245-417d-8710-c0ea1442ba07/128/",
+"firstName": "Poly Haven",
+"fullName": "Poly Haven ",
+"gravatarHash": "84ee1bc29360e65381f2d231fc6b254a",
+"id": "118455",
+"lastName": ""
+},
+"available_resolutions": [],
+"basePrice": "",
+"canDownload": true,
+"canDownloadError": true,
+"category": "bricks",
+"created": "2024-08-30T07:20:01.429282+02:00",
+"description": "by Charlotte Baglioni",
+"dictParameters": {
+"addons": true,
+"joinBlenderkitDiscounts": true,
+"platforms": ["windows-x64", "macos-arm64", "linux-x64", "macos-x64", "windows-arm64"],
+"procedural": false,
+"purePbr": true,
+"sexualizedContent": false,
+"textureCount": 0.0,
+"textureResolutionMax": 8192.0,
+"textureSizeMeters": 1.99
+},
+"displayName": "Brick Pavement 02",
+"downloaded": 100.0,
+"files": [{
+"created": "2024-08-30T07:28:42.956701+02:00",
+"downloadUrl": "https://www.blendkit.com/api/v1/downloads/453349/",
+"fileThumbnail": "",
+"fileThumbnailLarge": "",
+"fileType": "blend",
+"fileUploadSize": 253092103.0,
+"file_name": "C:\\Projects\\Godot\\torchlight\\Rooms\\Dungeon\\assets\\materials\\brick-pavement-0_e9942876-1245-4379-8cb5-56cd265edc87\\brick-pavement-02_86b30d5f-8ba0-494a-9f75-8334fc621828.blend",
+"filename": "assets/e9942876124543798cb556cd265edc87/files/blend_86b30d5f-8ba0-494a-9f75-8334fc621828.blend",
+"modified": "2024-08-30T07:28:42.956716+02:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "",
+"thumbnailSmallUrl": "",
+"url": "https://assets.blenderkit.com/assets/e9942876124543798cb556cd265edc87/files/blend_86b30d5f-8ba0-494a-9f75-8334fc621828.blend?verify=1785253804-4B8UPp6pdemhxqeFDPFnL2rNMTYuUn3L5KYfWVp%2FRwk%3D"
+}, {
+"created": "2024-08-30T07:28:50.301181+02:00",
+"downloadUrl": "https://www.blendkit.com/api/v1/downloads/453350/",
+"fileThumbnail": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.96x96_q85_crop-%2C.png",
+"fileThumbnailLarge": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.1024x1024_q85_crop-%2C.png",
+"fileType": "thumbnail",
+"fileUploadSize": 1315106.0,
+"filename": "assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png",
+"modified": "2025-12-22T23:42:24.975456+01:00",
+"resolution": 0.0,
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85_crop-%2C.png",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85_crop-%2C.png",
+"url": ""
+}],
+"filesSize": 248444.0,
+"id": "e9942876-1245-4379-8cb5-56cd265edc87",
+"isForSale": false,
+"isFree": true,
+"isPrivate": false,
+"lastAnimatedThumbnailUpload": null,
+"lastBlendUpload": "2024-08-30T05:28:42.956701+00:00",
+"lastGltfGodotUpload": null,
+"lastGltfUpload": null,
+"lastPhotoThumbnailUpload": null,
+"lastResolutionUpload": null,
+"lastThumbnailUpload": "2024-08-30T05:28:50.301181+00:00",
+"lastUserInteraction": "2025-06-19T15:36:41.351504+02:00",
+"lastVideoUpload": null,
+"lastZipFileUpload": "",
+"last_upload": "2024-08-30T05:28:42.956701+00:00",
+"license": "cc_zero",
+"max_resolution": 0.0,
+"name": "Brick Pavement 02",
+"pk": 107257.0,
+"ratingsAverage": {
+"bookmarks": 0.9452054794520548,
+"quality": 10.0,
+"virtualPrice": null,
+"workingHours": 5.0
+},
+"ratingsCount": {
+"bookmarks": 73.0,
+"quality": 1.0,
+"virtualPrice": 0.0,
+"workingHours": 1.0
+},
+"ratingsMedian": {
+"bookmarks": 1.0,
+"quality": 10.0,
+"virtualPrice": null,
+"workingHours": 5.0
+},
+"ratingsSum": {
+"bookmarks": 69.0,
+"quality": 10.0,
+"score": 500.0,
+"virtualPrice": null,
+"workingHours": 5.0
+},
+"resolution": "resolution_2K",
+"score": 500.0,
+"showMarketingLabels": true,
+"sourceAppName": "PolyHavenToBlenderKit.py",
+"sourceAppVersion": "4.5",
+"tags": ["old", "rough", "brick", "bricks", "pavement", "gray", "outdoor_flooring", "urban", "sidewalk"],
+"texture_size_meters": 1.99,
+"thumbnail": "thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85_crop-%2C.png.webp",
+"thumbnailLargeUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.1024x1024_q85_crop-%2C.png",
+"thumbnailLargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.1024x1024_q85.png",
+"thumbnailLargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.1024x1024_q85.png.webp?webp_generated=1767411211",
+"thumbnailLargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.1024x1024_q85_crop-%2C.png.webp?webp_generated=1767411211",
+"thumbnailMiddleUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85_crop-%2C.png",
+"thumbnailMiddleUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85.png",
+"thumbnailMiddleUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85.png.webp?webp_generated=1767411211",
+"thumbnailMiddleUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.512x512_q85_crop-%2C.png.webp?webp_generated=1767411211",
+"thumbnailSmallUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85_crop-%2C.png",
+"thumbnailSmallUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85.png",
+"thumbnailSmallUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85.png.webp?webp_generated=1767411211",
+"thumbnailSmallUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85_crop-%2C.png.webp?webp_generated=1767411211",
+"thumbnailXlargeUrl": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.2048x2048_q85_crop-%2C.png",
+"thumbnailXlargeUrlNonsquared": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.2048x2048_q85.png",
+"thumbnailXlargeUrlNonsquaredWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.2048x2048_q85.png.webp?webp_generated=1767411211",
+"thumbnailXlargeUrlWebp": "https://public.blenderkit.com/thumbnails/assets/e9942876124543798cb556cd265edc87/files/thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.2048x2048_q85_crop-%2C.png.webp?webp_generated=1767411211",
+"thumbnail_small": "thumbnail_230a6c45-f50a-46a5-b0cc-b11e474e296c.png.256x256_q85_crop-%2C.png.webp",
+"tooltip_data": {
+"aname": "Brick Pavement 02",
+"author_text": "by Poly Haven ",
+"base_price_bg_color": [0.7, 0.7, 0.7, 0.6],
+"base_price_color": [1.0, 1.0, 1.0, 0.9],
+"base_price_text": "",
+"quality": "10",
+"user_price_bg_color": [0.7, 0.7, 0.7, 0.6],
+"user_price_color": [1.0, 1.0, 1.0, 0.9],
+"user_price_text": ""
+},
+"url": "https://www.blendkit.com/api/v1/assets/e9942876-1245-4379-8cb5-56cd265edc87/",
+"verificationStatus": "validated",
+"versionNumber": 1.0,
+"videoLink": "",
+"webpGeneratedTimestamp": 1767411211.0
+},
+"blenderkit": {
+"asset_base_id": "aa400c76-3b18-4df8-992a-eb99a487125b",
+"description": "by Charlotte Baglioni",
+"id": "e9942876-1245-4379-8cb5-56cd265edc87",
+"is_private": 1.0,
+"tags": "old, rough, brick, bricks, pavement, gray, outdoor_flooring, urban, sidewalk",
+"verification_status": 2.0
+}
+}
+metadata/_gltf_primary_texture_coord = 1

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dvx570dnqrgmi"]
+
+[ext_resource type="Script" uid="uid://btmntn4rti4yf" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_eajqy"]
+[ext_resource type="PackedScene" uid="uid://c0tb8ymbue1jk" path="res://Rooms/Dungeon/Open_Room.blend" id="2_vtew7"]
+[ext_resource type="Script" uid="uid://p2fv5yxefyuc" path="res://Scripts/GameManager/RoomManager.cs" id="3_1x2pv"]
+[ext_resource type="PackedScene" uid="uid://dirytcsne2hjr" path="res://Rooms/General/Mask.blend" id="4_kv7y5"]
+
+[node name="Start" type="Node3D" unique_id=1037383837]
+script = ExtResource("1_eajqy")
+voxel_scale = Vector3(12, 6, 12)
+metadata/_custom_type_script = "uid://btmntn4rti4yf"
+
+[node name="Open_Room" parent="." unique_id=1760636210 instance=ExtResource("2_vtew7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+
+[node name="DOOR-a" type="Node3D" parent="." unique_id=455656010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="RoomManager" type="Node3D" parent="." unique_id=1505066329]
+script = ExtResource("3_1x2pv")
+Door_Mask = ExtResource("4_kv7y5")

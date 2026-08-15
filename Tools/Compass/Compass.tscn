@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bagk0lqkm8lxl"]
+
+[ext_resource type="PackedScene" uid="uid://brvhkomkwnbt0" path="res://Tools/Compass/Compass.blend" id="1_vyoe3"]
+[ext_resource type="Script" uid="uid://e4ox7btsftle" path="res://Scripts/Player/Player_Tools/Compass.cs" id="2_uamq0"]
+
+[node name="Compass" unique_id=1028776969 instance=ExtResource("1_vyoe3")]
+
+[node name="Display" parent="." index="1" unique_id=422625004]
+layers = 3
+
+[node name="Compass_Script" type="Node3D" parent="." index="6" unique_id=855777655 node_paths=PackedStringArray("Rotate")]
+script = ExtResource("2_uamq0")
+North = Vector3(1, 0, 0)
+Rotate = NodePath("../Display")

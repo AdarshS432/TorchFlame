@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bchb11bfgme5k"]
+
+[ext_resource type="Script" uid="uid://btmntn4rti4yf" path="res://addons/SimpleDungeons/DungeonRoom3D.gd" id="1_wmwbx"]
+[ext_resource type="PackedScene" uid="uid://c5oui2m7snu17" path="res://Rooms/Dungeon/Double_Entrance.blend" id="2_lsu6v"]
+[ext_resource type="Script" uid="uid://p2fv5yxefyuc" path="res://Scripts/GameManager/RoomManager.cs" id="3_fswlo"]
+[ext_resource type="PackedScene" uid="uid://dirytcsne2hjr" path="res://Rooms/General/Mask.blend" id="4_aijg0"]
+[ext_resource type="PackedScene" uid="uid://d0il1k7ri2vuy" path="res://Rooms/Dungeon/Scenes/Objects/Fire.tscn" id="5_eis8p"]
+
+[node name="DoubleEntrance" type="Node3D" unique_id=72289842]
+script = ExtResource("1_wmwbx")
+voxel_scale = Vector3(12, 6, 12)
+max_count = 64
+metadata/_custom_type_script = "uid://btmntn4rti4yf"
+
+[node name="Double_Entrance" parent="." unique_id=1201417947 instance=ExtResource("2_lsu6v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3, 0)
+
+[node name="DOOR-a" type="Node3D" parent="." unique_id=514553701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="DOOR-b" type="Node3D" parent="." unique_id=75654640]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -6, 0, 0)
+
+[node name="RoomManager" type="Node3D" parent="." unique_id=327270871]
+script = ExtResource("3_fswlo")
+Door_Mask = ExtResource("4_aijg0")
+
+[node name="Room_Fire" parent="." unique_id=389737088 instance=ExtResource("5_eis8p")]

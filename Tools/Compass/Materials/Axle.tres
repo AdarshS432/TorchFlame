@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dae27xqx8cx8g"]
+
+[resource]
+resource_name = "Axle"
+cull_mode = 2
+albedo_color = Color(0.4824058, 0.4824058, 0.4824058, 1)
+metallic = 1.0
+roughness = 0.26363635

@@ -18,6 +18,6 @@ public partial class GameAudio : AudioStreamPlayer
 	private void FadeOut()
 	{
 		Tween fade = this.CreateTween();
-		fade.TweenProperty(this, "volume_db", -60.0f, 3.0f);
+		fade.TweenProperty(this, "volume_db", -45.0f, 3.0f);
 	}
 }

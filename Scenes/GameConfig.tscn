@@ -299,7 +299,8 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_uh4rp")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_528h5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_72fbm")
 toggle_mode = true
-text = "Coordinates Enabled"
+button_pressed = true
+text = "Coordinates Disabled"
 
 [node name="ResetLabel" type="Label" parent="Settings_Container/Settings" unique_id=420376559]
 layout_mode = 2

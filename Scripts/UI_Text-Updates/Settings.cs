@@ -123,7 +123,7 @@ public partial class Settings : VBoxContainer
 		Map.ButtonPressed = false;
 		Compass.ButtonPressed = false;
 
-		Coordinates.ButtonPressed = false;
+		Coordinates.ButtonPressed = true;
 
 		SaveAll();
 	}

@@ -104,14 +104,20 @@ public partial class MapManager : Node3D
 		float nX = Mathf.InverseLerp(minX, maxX, coords.X);
 		float nZ = Mathf.InverseLerp(minZ, maxZ, coords.Y);
 
-		float x = Mathf.Lerp(margins.X, margins.X + usablewidth, nZ);
-		float y = Mathf.Lerp(margins.Y + usableheight, margins.Y, nX);
+		float halfW = Player_Image.GetWidth() / 2.0f;
+		float halfH = Player_Image.GetHeight() / 2.0f;
 
-		x -= Player_Image.GetWidth() / 2.0f;
-		y -= Player_Image.GetHeight() / 2.0f;
+		float min_map_x = margins.X + halfW;
+		float max_map_x = width - margins.Z - halfW;
+
+		float min_map_y = margins.Y + halfH;
+		float max_map_y = height - margins.W - halfH;
+
+		float x = Mathf.Lerp(min_map_x, max_map_x, nZ);
+		float y = Mathf.Lerp(max_map_y, min_map_y, nX); //INVERT Y COORDINATE
 
 		Vector2I finalcoords = new Vector2I((int)x, (int)y);
-		finalcoords -= new Vector2I(Player_Image.GetWidth() / 2, Player_Image.GetHeight() / 2);
+		finalcoords -= new Vector2I((int)halfW, (int)halfH);
 
 		Modified_Image.BlendRect(Player_Image, Player_Rect, finalcoords);
 
@@ -219,18 +225,26 @@ public partial class MapManager : Node3D
 			stair_dest.Add(new Vector2I(
 						(int)x,
 						(int)y));*/
+						
 			float nX = Mathf.InverseLerp(minX, maxX, loc.X);
 			float nZ = Mathf.InverseLerp(minZ, maxZ, loc.Z);
 
-			float x = Mathf.Lerp(margins.X, margins.X + usablewidth, nZ);
-			float y = Mathf.Lerp(margins.Y + usableheight, margins.Y, nX);
+			float halfW = stair.GetWidth() / 2.0f;
+			float halfH = stair.GetHeight() / 2.0f;
 
-			x -= stair.GetWidth() / 2.0f;
-			y -= stair.GetHeight() / 2.0f;
+			float min_map_x = margins.X + halfW;
+			float max_map_x = width - margins.Z - halfW;
 
-			stair_dest.Add(new Vector2I(
-						(int)x,
-						(int)y));
+			float min_map_y = margins.Y + halfH;
+			float max_map_y = height - margins.W - halfH;
+
+			float x = Mathf.Lerp(min_map_x, max_map_x, nZ);
+			float y = Mathf.Lerp(max_map_y, min_map_y, nX); //INVERT Y COORDINATE
+
+			Vector2I finalcoords = new Vector2I((int)x, (int)y);
+			finalcoords -= new Vector2I((int)halfW, (int)halfH);
+
+			stair_dest.Add(finalcoords);
 		}
 		for(int i = 0; i < mountain_count; i++)
 		{

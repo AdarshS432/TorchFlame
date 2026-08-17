@@ -31,12 +31,18 @@ public partial class RoomFire : MeshInstance3D
 
 		elapsed_time = new Stopwatch();
 		timer.Stop();
+		timer.Paused = true;
 
 		Sound.Playing = false;
 
 		fire_delay = Cookies.User.Get<float>("FireDelay");
 
-		roomManager.OnPlayerRoomEnter += ResetTimer;
+		roomManager.OnPlayerRoomEnter += () => {
+			if(timer.Paused)
+			{
+				ResetTimer();
+			}
+		};
 
 		timer.Timeout += StartStopwatch;
 
@@ -76,9 +82,9 @@ public partial class RoomFire : MeshInstance3D
 	}
 	private void ResetTimer()
 	{
-		timer.Start();
-		
-		timer.WaitTime = fire_delay;
+		timer.Paused = false;
+		timer.Start(fire_delay);
+	
 		//GD.Print("Timer Reset");
 	}
 	private void StartStopwatch()

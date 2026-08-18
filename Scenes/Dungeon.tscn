@@ -36,6 +36,7 @@
 [ext_resource type="PackedScene" uid="uid://crbta7pgpc56" path="res://Scenes/Inherited/GameUI.tscn" id="28_ukeut"]
 [ext_resource type="Animation" uid="uid://bh07jsju8s0j" path="res://Models/Player/Animations/Idle_2.res" id="29_ext21"]
 [ext_resource type="Animation" uid="uid://bayp30ujbiv0h" path="res://Models/Player/Animations/Running.res" id="29_sovmp"]
+[ext_resource type="AudioStream" uid="uid://303jawukxiam" path="res://Audio/BGMs/Walking_Sound.mp3" id="34_oemqi"]
 [ext_resource type="AudioStream" uid="uid://dgkh41g51cuvs" path="res://Audio/BGMs/TorchFlameMainMelody.mp3" id="37_d472q"]
 [ext_resource type="Script" uid="uid://s3k7esecraj2" path="res://Scripts/Audio/GameAudio.cs" id="38_6id3g"]
 
@@ -224,6 +225,11 @@ dungeon_size = Vector3i(10, 3, 10)
 voxel_scale = Vector3(12, 6, 12)
 generate_on_ready = false
 max_retries = 24
+generate_threaded = true
+astar_heuristic = 1
+corridor_cost_multiplier = 10.0
+room_cost_multiplier = 0.1
+room_cost_at_end_for_required_doors = 25.0
 metadata/_custom_type_script = "uid://c8mbe6uf2usuf"
 
 [node name="Start" parent="DungeonGenerator3D" unique_id=1037383837 instance=ExtResource("9_b5tql")]
@@ -708,6 +714,11 @@ parameters/Jump/request = 0
 parameters/Die/active = false
 parameters/Die/internal_active = false
 parameters/Die/request = 0
+
+[node name="PlayerAudio" type="AudioStreamPlayer3D" parent="Player" unique_id=1101608905]
+unique_name_in_owner = true
+stream = ExtResource("34_oemqi")
+parameters/looping = true
 
 [node name="GameManager" type="Node3D" parent="." unique_id=1409648640 node_paths=PackedStringArray("Dungeon_Generator", "map_manager")]
 unique_name_in_owner = true

@@ -726,6 +726,7 @@ Player = NodePath("../Player")
 [node name="GameUI" parent="." unique_id=149433497 instance=ExtResource("28_ukeut")]
 
 [node name="GameAudio" type="AudioStreamPlayer" parent="." unique_id=1740268946]
+unique_name_in_owner = true
 stream = ExtResource("37_d472q")
 volume_db = -6.0
 autoplay = true

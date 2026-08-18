@@ -33,6 +33,14 @@ texture = ExtResource("3_ciywa")
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lkrja"]
 texture = ExtResource("3_ciywa")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ciywa"]
+bg_color = Color(0.21568628, 0.047058824, 0, 0.7529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s7sim"]
+bg_color = Color(0.11153991, 0.014805533, 3.008172e-09, 0.7529412)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8duso"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oyla6"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ln1gj"]
@@ -51,6 +59,9 @@ FoldableContainer/styles/title_collapsed_hover_panel = SubResource("StyleBoxText
 FoldableContainer/styles/title_collapsed_panel = SubResource("StyleBoxTexture_s7sim")
 FoldableContainer/styles/title_hover_panel = SubResource("StyleBoxTexture_ciywa")
 FoldableContainer/styles/title_panel = SubResource("StyleBoxTexture_lkrja")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_ciywa")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_s7sim")
+HSlider/styles/slider = SubResource("StyleBoxFlat_8duso")
 Label/font_sizes/font_size = 32
 Label/fonts/font = ExtResource("1_usse2")
 LineEdit/colors/font_color = Color(0.2307542, 0.11460041, 1.2032688e-08, 1)

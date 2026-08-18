@@ -1,9 +1,17 @@
 using Godot;
 using System;
+using System.Runtime.CompilerServices;
 
 public partial class GameAudio : AudioStreamPlayer
 {
 	private GameManager GameManager;
+	public float Volume {get; set {
+			float nVol = value / 100.0f;
+			float db = Mathf.LinearToDb(nVol);
+			this.VolumeDb = db;
+			field = value;
+		}
+	}
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -14,6 +22,7 @@ public partial class GameAudio : AudioStreamPlayer
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
+		
 	}
 	private void FadeOut()
 	{

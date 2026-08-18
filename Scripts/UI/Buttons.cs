@@ -4,11 +4,21 @@ using System;
 public partial class Buttons : VBoxContainer
 {
 	private Button Pause, Quit;
+
+	private GameAudio GameAudio;
+	private SpinBox Volume;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
 		Pause = GetNode<Button>("Pause");
 		Quit = GetNode<Button>("Quit");
+
+		GameAudio = GetTree().CurrentScene.GetNode<GameAudio>("%GameAudio");
+		
+		Volume = GetNode<SpinBox>("%VolumeSpinBox");
+		Volume.ValueChanged += (double value) => {
+			GameAudio.Volume = (float)value;
+		};
 
 		Pause.Pressed += PauseGame;
 		Quit.Pressed += QuitGame;

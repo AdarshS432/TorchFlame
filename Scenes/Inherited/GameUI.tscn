@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dgqojex84gbmi" path="res://Scripts/UI/GameUi.cs" id="1_v6vxq"]
 [ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_krjqg"]
-[ext_resource type="Texture2D" uid="uid://dbvbjkjodh8wc" path="res://Models/Map/Paper_Border_diffuse.png" id="3_w7j1c"]
 [ext_resource type="Script" uid="uid://bcya6fbemyqyq" path="res://Scripts/UI/Buttons.cs" id="4_8duso"]
 [ext_resource type="Texture2D" uid="uid://ql1fxfescsg5" path="res://UI/Elements/Button_Background.svg" id="5_ax0t1"]
 [ext_resource type="Script" uid="uid://d0t5bv6qo8tyg" path="res://Scripts/UI_Text-Updates/GameWon.cs" id="7_8duso"]
@@ -64,54 +63,43 @@ offset_right = 256.0
 offset_bottom = 42.0
 
 [node name="Menu_Dropdown" type="FoldableContainer" parent="Menu_Margins" unique_id=332803911]
-custom_minimum_size = Vector2(256, 0)
+custom_minimum_size = Vector2(256, 324)
 layout_mode = 2
 theme = ExtResource("2_krjqg")
 theme_override_colors/font_color = Color(0.3019608, 0.15686275, 0, 1)
 theme_override_colors/hover_font_color = Color(0.3019608, 0.15686275, 0, 1)
 theme_override_colors/collapsed_font_color = Color(0.3019608, 0.15686275, 0, 1)
 theme_override_colors/font_outline_color = Color(0.3019608, 0.15686275, 0, 1)
-folded = true
 title = "Menu"
 
 [node name="Menu" type="TextureRect" parent="Menu_Margins/Menu_Dropdown" unique_id=711690318]
-visible = false
-custom_minimum_size = Vector2(256, 256)
-custom_maximum_size = Vector2(256, 256)
+custom_minimum_size = Vector2(256, 324)
+custom_maximum_size = Vector2(256, 324)
 layout_mode = 2
-texture = ExtResource("3_w7j1c")
-expand_mode = 1
 
-[node name="Menu_Label" type="Label" parent="Menu_Margins/Menu_Dropdown/Menu" unique_id=711655963]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -41.5
-offset_right = 41.5
-offset_bottom = 42.0
-grow_horizontal = 2
-theme = ExtResource("2_krjqg")
-theme_override_colors/font_color = Color(0.3023813, 0.15606976, 2.6471912e-07, 1)
-theme_override_font_sizes/font_size = 48
-text = "Options"
-
-[node name="Buttons" type="VBoxContainer" parent="Menu_Margins/Menu_Dropdown/Menu" unique_id=73044309]
+[node name="Controls" type="VBoxContainer" parent="Menu_Margins/Menu_Dropdown/Menu" unique_id=73044309]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -64.0
-offset_top = -34.0
-offset_right = 64.0
-offset_bottom = 34.0
+offset_left = -85.0
+offset_top = -135.5
+offset_right = 85.0
+offset_bottom = 135.5
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("4_8duso")
 
-[node name="Pause" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Buttons" unique_id=618993202]
+[node name="Menu_Label" type="Label" parent="Menu_Margins/Menu_Dropdown/Menu/Controls" unique_id=711655963]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(0.3023813, 0.15606976, 2.6471912e-07, 1)
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="Pause" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Controls" unique_id=618993202]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 theme = ExtResource("2_krjqg")
@@ -121,7 +109,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_cl2uv")
 toggle_mode = true
 text = "Pause"
 
-[node name="Quit" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Buttons" unique_id=2007037114]
+[node name="Quit" type="Button" parent="Menu_Margins/Menu_Dropdown/Menu/Controls" unique_id=2007037114]
 custom_minimum_size = Vector2(128, 32)
 layout_mode = 2
 theme = ExtResource("2_krjqg")
@@ -131,6 +119,29 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_l4nxx")
 toggle_mode = true
 text = "Quit
 "
+
+[node name="VolumeControl" type="VBoxContainer" parent="Menu_Margins/Menu_Dropdown/Menu/Controls" unique_id=927232584]
+layout_mode = 2
+
+[node name="AudioLabel" type="Label" parent="Menu_Margins/Menu_Dropdown/Menu/Controls/VolumeControl" unique_id=812853664]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(0.3023813, 0.15606976, 2.6471912e-07, 1)
+theme_override_font_sizes/font_size = 32
+text = "Audio: "
+
+[node name="VolumeLabel" type="Label" parent="Menu_Margins/Menu_Dropdown/Menu/Controls/VolumeControl" unique_id=838332040]
+layout_mode = 2
+theme = ExtResource("2_krjqg")
+theme_override_colors/font_color = Color(0.3023813, 0.15606976, 2.6471912e-07, 1)
+theme_override_font_sizes/font_size = 24
+text = "Volume: "
+
+[node name="VolumeSpinBox" type="SpinBox" parent="Menu_Margins/Menu_Dropdown/Menu/Controls/VolumeControl" unique_id=1710710174]
+unique_name_in_owner = true
+layout_mode = 2
+value = 100.0
+update_on_text_changed = true
 
 [node name="EndScreen" type="Panel" parent="." unique_id=2076262644]
 modulate = Color(1, 1, 1, 0)

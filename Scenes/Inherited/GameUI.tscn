@@ -245,10 +245,11 @@ anchor_bottom = 1.0
 offset_top = -100.0
 offset_right = 112.0
 grow_vertical = 0
+offset_transform_enabled = true
 script = ExtResource("7_krjqg")
 
 [node name="Rotation_Joystick" type="VirtualJoystick" parent="Mobile_Controls" unique_id=1491577596]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0

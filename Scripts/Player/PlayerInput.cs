@@ -9,6 +9,7 @@ public partial class PlayerInput : CharacterBody3D
 	private float Gravity_Save;
 	[Export] public float GravityScale = 2f;
 	public Camera3D cam;
+	private Vector2 joystick_sensitivity = new Vector2(0.01f, 1.0f);
 	private float sensitivity = 0.0015f;
 	[Export] public float Jump_Strength = 6f;
 	[Export] public int Max_Wall_Jumps = 1;
@@ -89,7 +90,7 @@ public partial class PlayerInput : CharacterBody3D
 		previous_velocity = Velocity;
 
 		Move();
-		Rotate();
+		RotateMobile((float)delta);
 		if(isJumping) {
 			if(IsOnFloor()/*Only()*/)
 			{
@@ -135,17 +136,20 @@ public partial class PlayerInput : CharacterBody3D
 	}
 	public override void _Input(InputEvent @e) {
 		if(@e is InputEventMouseMotion mm) {
-			RotateY(-mm.Relative.X * sensitivity);
+			if(!OS.HasFeature("mobile"))
+			{
+				RotateY(-mm.Relative.X * sensitivity);
 
-			x_rotation += -mm.Relative.Y * sensitivity;
-			x_rotation = (float) Math.Clamp(x_rotation, Mathf.DegToRad(-89), Mathf.DegToRad(89));
+				x_rotation += -mm.Relative.Y * sensitivity;
+				x_rotation = (float) Math.Clamp(x_rotation, Mathf.DegToRad(-89), Mathf.DegToRad(89));
 
-			//PlayerGeometry.RotateY(-mm.Relative.X * sensitivity);
-			Vector3 rot = cam.Rotation;
-			rot.Z = 0;
-			rot.X = x_rotation;
+				//PlayerGeometry.RotateY(-mm.Relative.X * sensitivity);
+				Vector3 rot = cam.Rotation;
+				rot.Z = 0;
+				rot.X = x_rotation;
 
-			cam.Rotation = rot;
+				cam.Rotation = rot;
+			}
 		}
 		if(@e.IsActionPressed("Jump") && !@e.IsEcho() && CanJump()) {
 			if(!UpDownEnabled)
@@ -184,8 +188,11 @@ public partial class PlayerInput : CharacterBody3D
 	}
 	private void Move()
 	{
-				Vector3 movement = Vector3.Zero;;
-		IsSprinting = Input.IsActionPressed("Sprint");
+		Vector3 movement = Vector3.Zero;
+
+		if(Input.IsActionPressed("Sprint")) IsSprinting = true;
+		if(Input.IsActionJustReleased("Sprint")) IsSprinting = false;
+
 		WalkSpeed = (IsSprinting) ? BaseSpeed * Sprint : BaseSpeed;
 		
 		velocity = Velocity;
@@ -195,29 +202,28 @@ public partial class PlayerInput : CharacterBody3D
 
 		movement = cam.GlobalTransform.Basis * new Vector3(keys.X, 0, keys.Y);
 //FIX THIS PART
-		Vector2 rot = Input.GetVector("Camera_Right", "Camera_Left", "Camera_Up", "Camera_Down");
+		/*Vector2 rot = Input.GetVector("Camera_Right", "Camera_Left", "Camera_Up", "Camera_Down");
 		if(Input.MouseMode == Input.MouseModeEnum.Captured && rot != Vector2.Zero)
 		{
 			Vector2 movepos = new Vector2((rot.X > 0.0f) ? 1.0f : -1.0f, (rot.Y > 0.0f) ? 1.0f : -1.0f);
 			movepos *= 0.1f;
 			movement += cam.GlobalTransform.Basis * new Vector3(movepos.X, 0, movepos.Y);
-		} 
+		} */
 		movement.Y = 0;
 		velocity += movement * WalkSpeed;
-
 		//CameraBounce(0.05f, 0.1f);
 	}
-	private void Rotate()
+	private void RotateMobile(float delta)
 	{
 		Vector2 rot = Input.GetVector("Camera_Right", "Camera_Left", "Camera_Up", "Camera_Down");
-		if(Input.MouseMode == Input.MouseModeEnum.Captured && rot != Vector2.Zero)
+		
+			GD.Print(rot);
+		if(rot != Vector2.Zero)
 		{
-			rot *= 20.0f;
-
-			RotateY(rot.X * sensitivity);
+			RotateY(rot.X * joystick_sensitivity.Y * (float)delta);
 			//PlayerGeometry.RotateY(rot.X * sensitivity);
 
-			x_rotation += -rot.Y * sensitivity;
+			x_rotation += -rot.Y * joystick_sensitivity.X;
 			x_rotation = (float) Math.Clamp(x_rotation, Mathf.DegToRad(-89), Mathf.DegToRad(89));
 
 			Vector3 camrot = cam.Rotation;

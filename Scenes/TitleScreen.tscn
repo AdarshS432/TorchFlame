@@ -4,6 +4,32 @@
 [ext_resource type="Theme" uid="uid://dllcuglq0qgrc" path="res://UI/Themes/Main_Theme.tres" id="2_vmg2h"]
 [ext_resource type="Script" uid="uid://cq4hufq87w6p6" path="res://Scripts/UI/Play.cs" id="3_8l4an"]
 [ext_resource type="Script" uid="uid://dv7q1umqu8tbl" path="res://Scripts/UI/Credits.cs" id="4_n15yj"]
+[ext_resource type="Texture2D" uid="uid://dbvbjkjodh8wc" path="res://Models/Map/Paper_Border_diffuse.png" id="5_emot1"]
+[ext_resource type="Script" uid="uid://bjvv0d2564a2d" path="res://Scripts/UI_Text-Updates/CopyLegalNotice.cs" id="6_i5sur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5sur"]
+bg_color = Color(1, 1, 1, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.11372549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfyqv"]
+bg_color = Color(0.23137255, 0.11372549, 0, 0.7529412)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.11372549, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pie25"]
+bg_color = Color(0.23137255, 0.11372549, 0, 0.3764706)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.11372549, 0, 1)
 
 [node name="TitleScreen" type="Control" unique_id=1392780238]
 layout_mode = 3
@@ -82,3 +108,130 @@ grow_vertical = 0
 theme = ExtResource("2_vmg2h")
 theme_override_font_sizes/font_size = 24
 text = "Version: 1.0.0"
+
+[node name="LicenseScreen" type="Panel" parent="." unique_id=1194104638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("6_i5sur")
+PrivacyPolicy_File = "res://Legal/TORCHFLAME-PrivacyPolicy.md"
+EULA_File = "res://Legal/TORCHFLAME-EULA.md"
+
+[node name="License_Panel" type="TextureRect" parent="LicenseScreen" unique_id=991452210]
+custom_minimum_size = Vector2(768, 648)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_emot1")
+expand_mode = 1
+
+[node name="LicenseContainer" type="VBoxContainer" parent="LicenseScreen/License_Panel" unique_id=1233003575]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360.0
+offset_right = 360.0
+offset_bottom = 165.0
+grow_horizontal = 2
+
+[node name="HeadingContainer" type="MarginContainer" parent="LicenseScreen/License_Panel/LicenseContainer" unique_id=548069348]
+custom_maximum_size = Vector2(720, -1)
+layout_mode = 2
+theme_override_constants/margin_top = 24
+
+[node name="Heading" type="Label" parent="LicenseScreen/License_Panel/LicenseContainer/HeadingContainer" unique_id=1073433429]
+custom_maximum_size = Vector2(720, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_vmg2h")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_font_sizes/font_size = 24
+text = "ATTENTION:
+You must agree to the privacy policy and end user license agreement below to continue. Expand the menus to view each document. "
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Main_Scroll" type="ScrollContainer" parent="LicenseScreen/License_Panel/LicenseContainer" unique_id=225335018]
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 2
+
+[node name="License_Foldables" type="VBoxContainer" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll" unique_id=1314190237]
+layout_mode = 2
+
+[node name="PrivacyPolicy" type="FoldableContainer" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables" unique_id=1802746171]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+theme = ExtResource("2_vmg2h")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/hover_font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/collapsed_font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_outline_color = Color(0.23137255, 0.11372549, 0, 1)
+folded = true
+title = "Privacy Policy"
+
+[node name="Scroll" type="ScrollContainer" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables/PrivacyPolicy" unique_id=1717059730]
+visible = false
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 2
+
+[node name="PrivacyPolicyDisplay" type="RichTextLabel" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables/PrivacyPolicy/Scroll" unique_id=599137934]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(648, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/default_color = Color(0.23137255, 0.11372549, 0, 1)
+
+[node name="EULA" type="FoldableContainer" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables" unique_id=432290539]
+custom_minimum_size = Vector2(720, 0)
+layout_mode = 2
+theme = ExtResource("2_vmg2h")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/hover_font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/collapsed_font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_outline_color = Color(0.23137255, 0.11372549, 0, 1)
+folded = true
+title = "End User License Agreement"
+
+[node name="Scroll" type="ScrollContainer" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables/EULA" unique_id=226244175]
+visible = false
+custom_minimum_size = Vector2(0, 432)
+layout_mode = 2
+
+[node name="EULADisplay" type="RichTextLabel" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables/EULA/Scroll" unique_id=215537179]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(648, 400)
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/default_color = Color(0.23137255, 0.11372549, 0, 1)
+bbcode_enabled = true
+
+[node name="AgreeButton" type="Button" parent="LicenseScreen/License_Panel/LicenseContainer/Main_Scroll/License_Foldables" unique_id=1804086044]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(432, 48)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_vmg2h")
+theme_override_colors/font_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.23137255, 0.11372549, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_i5sur")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qfyqv")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pie25")
+text = "I have read and agree to the documents above. "

@@ -102,4 +102,4 @@ size_flags_vertical = 3
 theme = ExtResource("2_7xmno")
 bbcode_enabled = true
 script = ExtResource("3_7xmno")
-License_Files = Array[String](["res://Licenses/Attribution.txt", "res://Licenses/Godot-License.txt", "res://Licenses/Godot-Copyright.txt"])
+License_Files = Array[String](["res://Legal/Attribution.txt", "res://Legal/Godot-License.txt", "res://Legal/Godot-Copyright.txt"])

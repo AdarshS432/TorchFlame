@@ -217,7 +217,7 @@ public partial class PlayerInput : CharacterBody3D
 	{
 		Vector2 rot = Input.GetVector("Camera_Right", "Camera_Left", "Camera_Up", "Camera_Down");
 		
-			GD.Print(rot);
+			//GD.Print(rot);
 		if(rot != Vector2.Zero)
 		{
 			RotateY(rot.X * joystick_sensitivity.Y * (float)delta);

@@ -35,9 +35,9 @@ public partial class Settings : VBoxContainer
 		Reset = GetNode<Button>("%ResetButton");
 
 
-		Levels.Value = Cookies.User.Get<int>("LevelCount");
-		SizeBox.Value = Cookies.User.Get<int>("DungeonSize");
-		FireDelay.Value = Cookies.User.Get<int>("FireDelay");
+		Levels.Value = Cookies.User.Get<int>("LevelCount", 3);
+		SizeBox.Value = Cookies.User.Get<int>("DungeonSize", 10);
+		FireDelay.Value = Cookies.User.Get<float>("FireDelay", 10.0f);
 
 		var Items_Save = Cookies.User.Get<System.Collections.Generic.Dictionary<string, bool>>("Inventory_Items");
 		if(Items_Save != null && Items_Save.Count >= 0)
@@ -46,9 +46,9 @@ public partial class Settings : VBoxContainer
 			Compass.ButtonPressed = !Items_Save["Compass"];
 		}
 
-		Coordinates.ButtonPressed = !Cookies.User.Get<bool>("Coordinates");
+		Coordinates.ButtonPressed = !Cookies.User.Get<bool>("Coordinates", true);
 
-		RoomPlacement.ButtonPressed = !Cookies.User.Get<bool>("RoomPlacement");
+		RoomPlacement.ButtonPressed = !Cookies.User.Get<bool>("RoomPlacement", true);
 
 
 		Inventory_Items.Add("Map", !Map.ButtonPressed); //NAMES MUST MATCH PERFECTLY WITH TOOL NAMES
@@ -88,7 +88,7 @@ public partial class Settings : VBoxContainer
 	}
 	private void SaveFireDelay(double value)
 	{
-		int finalvalue = (int)value;
+		float finalvalue = (float)value;
 		Cookies.User.Set("FireDelay", finalvalue);
 	}
 	private void SaveAll()
